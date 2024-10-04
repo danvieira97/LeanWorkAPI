@@ -1,0 +1,6 @@
+@LeanWorkAPI_HostAddress = http://localhost:5160
+
+GET {{LeanWorkAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
