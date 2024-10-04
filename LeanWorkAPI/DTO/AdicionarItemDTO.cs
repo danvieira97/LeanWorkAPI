@@ -13,5 +13,7 @@ public class RequestAdicionarItemDTO
 public class ResponseAdicionarItemDTO
 {
     public string Mensagem { get; set; } = "Item adicionado com sucesso";
+
+    public bool Status { get; set; } = true;
     public ItemCarrinhoModel? Item { get; set; }
 }

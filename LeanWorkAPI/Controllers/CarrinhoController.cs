@@ -1,6 +1,5 @@
 using LeanWorkAPI.DTO;
 using LeanWorkAPI.Services.Carrinho;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LeanWorkAPI.Controllers
@@ -27,6 +26,11 @@ namespace LeanWorkAPI.Controllers
         public async Task<IActionResult> AdicionarItem(int idCarrinho, [FromBody] RequestAdicionarItemDTO request)
         {
             var response = await _carrinhoService.AdicionarItem(idCarrinho, request);
+
+            if (!response.Status)
+            {
+                return BadRequest(response);
+            }
 
             return Ok(response);
         }

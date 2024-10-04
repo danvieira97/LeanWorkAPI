@@ -1118,19 +1118,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/danilovieira/.nuget/packages/": {}
+    "C:\\Users\\danilo.vieira\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danilovieira/Documents/dotnet-workspace/LeanWorkAPI/LeanWorkAPI/LeanWorkAPI.csproj",
+      "projectUniqueName": "C:\\Users\\danilo.vieira\\Documents\\workspace-personal\\LeanWorkAPI\\LeanWorkAPI\\LeanWorkAPI.csproj",
       "projectName": "LeanWorkAPI",
-      "projectPath": "/Users/danilovieira/Documents/dotnet-workspace/LeanWorkAPI/LeanWorkAPI/LeanWorkAPI.csproj",
-      "packagesPath": "/Users/danilovieira/.nuget/packages/",
-      "outputPath": "/Users/danilovieira/Documents/dotnet-workspace/LeanWorkAPI/LeanWorkAPI/obj/",
+      "projectPath": "C:\\Users\\danilo.vieira\\Documents\\workspace-personal\\LeanWorkAPI\\LeanWorkAPI\\LeanWorkAPI.csproj",
+      "packagesPath": "C:\\Users\\danilo.vieira\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\danilo.vieira\\Documents\\workspace-personal\\LeanWorkAPI\\LeanWorkAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/danilovieira/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\danilo.vieira\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1195,7 +1195,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

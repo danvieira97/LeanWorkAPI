@@ -20,7 +20,7 @@ public class CarrinhoService : ICarrinhoInterface
     {
         ResponseAdicionarItemDTO response = new ResponseAdicionarItemDTO();
 
-        using (var connection = new SqlConnection(_configuration.GetConnectionString("Default")))
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultWin")))
         {
             // Verifica se o carrinho existe
             var queryCarrinho = "SELECT * FROM Carrinhos WHERE CarrinhoId = @Id";
@@ -29,6 +29,13 @@ public class CarrinhoService : ICarrinhoInterface
             if (carrinho is null)
             {
                 response.Mensagem = "Carrinho não encontrado";
+                return response;
+            }
+
+            if(request.Produto == "")
+            {
+                response.Mensagem = "Produto não informado";
+                response.Status = false;
                 return response;
             }
 
@@ -59,7 +66,7 @@ public class CarrinhoService : ICarrinhoInterface
     {
         ResponseAtualizarItemDTO response = new ResponseAtualizarItemDTO();
 
-        using (var connection = new SqlConnection(_configuration.GetConnectionString("Default")))
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultWin")))
         {
             // Atualiza o item e retorna o item atualizado
             var queryAtualizar = @"UPDATE Carrinho_Itens 
@@ -96,7 +103,7 @@ public class CarrinhoService : ICarrinhoInterface
     {
         CarrinhoModel? response = new();
 
-        using (var connection = new SqlConnection(_configuration.GetConnectionString("Default")))
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultWin")))
         {
             var query = "SELECT * FROM Carrinhos WHERE CarrinhoId = @Id";
             var carrinho = await connection.QueryFirstOrDefaultAsync<CarrinhoModel>(query, new { Id = idCarrinho });
@@ -124,7 +131,7 @@ public class CarrinhoService : ICarrinhoInterface
     {
         ResponseDeletarItemDTO response = new ResponseDeletarItemDTO();
 
-        using (var connection = new SqlConnection(_configuration.GetConnectionString("Default")))
+        using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultWin")))
         {
             var buscarItem = "SELECT * FROM Carrinho_Itens WHERE Id = @IdItem";
             var item = await connection.QueryFirstOrDefaultAsync<ItemCarrinhoModel>(buscarItem, new { IdItem = idItem });
